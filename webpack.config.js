@@ -8,6 +8,14 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  module: {
+    rule: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      }
+    ]
+  },
   devtool: "inline-source-map",
   devServer: {
       static: "./dist/", 
